@@ -1,0 +1,503 @@
+:root {
+	--ys-sfl-purple: #7413dc;
+	--ys-sfl-purple-dark: #490499;
+	--ys-sfl-blue: #006ddf;
+	--ys-sfl-deep-blue: #003982;
+	--ys-sfl-yellow: #ffe627;
+	--ys-sfl-green: #23a950;
+	--ys-sfl-red: #e22e12;
+	--ys-sfl-grey: #f1f1f1;
+	--ys-sfl-ink: #404040;
+}
+
+#ys_event_settings .inside,
+#ys_event_sales .inside,
+.ys-bookings-page,
+.ys-booking-detail {
+	color: var(--ys-sfl-ink);
+	font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#ys_event_settings .inside *,
+#ys_event_settings .inside *::before,
+#ys_event_settings .inside *::after,
+#ys_event_sales .inside *,
+#ys_event_sales .inside *::before,
+#ys_event_sales .inside *::after,
+.ys-bookings-page *,
+.ys-bookings-page *::before,
+.ys-bookings-page *::after,
+.ys-booking-detail *,
+.ys-booking-detail *::before,
+.ys-booking-detail *::after {
+	box-sizing: border-box;
+}
+
+.ys-admin-notice {
+	background: var(--ys-sfl-grey);
+	border-left: 6px solid var(--ys-sfl-yellow);
+	border-top: 4px solid var(--ys-sfl-purple);
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 800;
+	margin: 0 0 18px;
+	padding: 14px 16px;
+}
+
+.ys-admin-notice label {
+	align-items: flex-start;
+	display: flex;
+	gap: 8px;
+	margin: 0;
+}
+
+.ys-admin-notice input[type="checkbox"],
+.ys-admin-panel input[type="checkbox"] {
+	accent-color: var(--ys-sfl-purple);
+	margin-top: 2px;
+}
+
+.ys-settings-wrap {
+	max-width: 1100px;
+}
+
+.ys-admin-grid {
+	display: grid;
+	gap: 18px 20px;
+	grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+
+.ys-admin-field label {
+	color: var(--ys-sfl-deep-blue);
+	display: block;
+	font-weight: 800;
+	margin-bottom: 6px;
+}
+
+.ys-admin-field input,
+.ys-admin-field select,
+.ys-bookings-page select,
+.ys-bookings-page input[type="date"],
+.ys-bookings-page input[type="search"] {
+	border: 1px solid #8d8d8d;
+	border-radius: 0;
+	box-shadow: none;
+	min-height: 36px;
+	max-width: 100%;
+}
+
+.ys-admin-field input,
+.ys-admin-field select,
+.ys-bookings-filters select,
+.ys-bookings-filters input[type="date"],
+.ys-bookings-filters input[type="search"] {
+	width: 100%;
+}
+
+.ys-admin-field input:focus,
+.ys-admin-field select:focus,
+.ys-custom-slots-table input:focus,
+.ys-custom-fields-table input:focus,
+.ys-custom-fields-table select:focus,
+.ys-bookings-page select:focus,
+.ys-bookings-page input[type="date"]:focus,
+.ys-bookings-page input[type="search"]:focus {
+	border-color: var(--ys-sfl-purple);
+	box-shadow: 0 0 0 3px rgba( 255, 230, 39, 0.65 );
+	outline: 2px solid transparent;
+}
+
+.ys-admin-panel {
+	background: #fff;
+	border: 1px solid #d7d7d7;
+	border-top: 5px solid var(--ys-sfl-purple);
+	margin-top: 18px;
+	padding: 16px;
+}
+
+.ys-admin-panel h3,
+.ys-admin-panel h4 {
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 900;
+	letter-spacing: 0;
+	margin-top: 0;
+}
+
+.ys-admin-panel strong {
+	color: var(--ys-sfl-deep-blue);
+}
+
+.ys-slot-mode-panel {
+	margin-top: 16px;
+}
+
+.ys-custom-slots-table {
+	margin-top: 12px;
+	max-width: 760px;
+}
+
+.ys-custom-fields-table {
+	margin-top: 10px;
+	max-width: 1100px;
+}
+
+.ys-custom-slots-table,
+.ys-custom-fields-table,
+.ys-booking-detail .widefat,
+.ys-orphaned-bookings-panel .widefat {
+	border-color: #d7d7d7;
+}
+
+.ys-custom-slots-table thead th,
+.ys-custom-fields-table thead th,
+.ys-bookings-table thead th,
+.ys-orphaned-bookings-panel thead th {
+	background: var(--ys-sfl-deep-blue);
+	border-color: var(--ys-sfl-deep-blue);
+	color: #fff;
+	font-weight: 800;
+}
+
+.ys-custom-slots-table th,
+.ys-custom-slots-table td,
+.ys-custom-fields-table th,
+.ys-custom-fields-table td {
+	vertical-align: middle;
+}
+
+.ys-custom-slots-table input,
+.ys-custom-fields-table input,
+.ys-custom-fields-table select {
+	border: 1px solid #8d8d8d;
+	border-radius: 0;
+	min-height: 34px;
+	width: 100%;
+}
+
+.ys-custom-slots-table th:last-child,
+.ys-custom-slots-table td:last-child {
+	text-align: right;
+	width: 90px;
+}
+
+#ys_event_settings .button,
+#ys_event_sales .button,
+.ys-bookings-page .button,
+.ys-booking-detail .button {
+	background: #fff;
+	border: 1px solid var(--ys-sfl-deep-blue);
+	border-radius: 0;
+	box-shadow: none;
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 800;
+}
+
+#ys_event_settings .button:hover,
+#ys_event_settings .button:focus,
+#ys_event_sales .button:hover,
+#ys_event_sales .button:focus,
+.ys-bookings-page .button:hover,
+.ys-bookings-page .button:focus,
+.ys-booking-detail .button:hover,
+.ys-booking-detail .button:focus {
+	background: var(--ys-sfl-deep-blue);
+	border-color: var(--ys-sfl-deep-blue);
+	color: #fff;
+}
+
+#ys_event_settings .button-primary,
+.ys-bookings-page .button-primary,
+.ys-booking-detail .button-primary {
+	background: var(--ys-sfl-purple);
+	border-color: var(--ys-sfl-purple);
+	color: #fff;
+}
+
+#ys_event_settings .button-primary:hover,
+#ys_event_settings .button-primary:focus,
+.ys-bookings-page .button-primary:hover,
+.ys-bookings-page .button-primary:focus,
+.ys-booking-detail .button-primary:hover,
+.ys-booking-detail .button-primary:focus {
+	background: var(--ys-sfl-purple-dark);
+	border-color: var(--ys-sfl-purple-dark);
+	color: #fff;
+}
+
+#ys_event_settings .button-link-delete,
+#ys_event_sales .button-link-delete,
+.ys-bookings-page .button-link-delete,
+.ys-booking-detail .button-link-delete {
+	color: var(--ys-sfl-red);
+	font-weight: 800;
+}
+
+.ys-sales-big {
+	color: var(--ys-sfl-deep-blue);
+	font-size: 24px;
+	margin: 4px 0;
+}
+
+.ys-sales-big strong {
+	color: var(--ys-sfl-purple);
+	font-size: 32px;
+	font-weight: 900;
+}
+
+.ys-sales-big span {
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.ys-slot-sales {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.ys-slot-sales td {
+	border-top: 1px solid #d7d7d7;
+	padding: 6px 0;
+}
+
+.ys-slot-sales td:last-child {
+	color: var(--ys-sfl-deep-blue);
+	text-align: right;
+}
+
+.ys-muted {
+	color: #646970;
+}
+
+.wp-list-table .column-ys_tickets_sold strong,
+.wp-list-table .column-ys_remaining strong {
+	color: var(--ys-sfl-purple);
+	font-size: 15px;
+	font-weight: 900;
+}
+
+.wp-list-table .column-ys_tickets_sold .ys-muted,
+.wp-list-table .column-ys_remaining .ys-muted {
+	color: #646970;
+	font-weight: 700;
+}
+
+.ys-bookings-page .wp-heading-inline,
+.ys-booking-detail h1 {
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 900;
+}
+
+.ys-bookings-page a:not(.button),
+.ys-booking-detail a:not(.button) {
+	color: var(--ys-sfl-blue);
+	font-weight: 700;
+}
+
+.ys-bookings-filters {
+	align-items: center;
+	background: #fff;
+	border: 1px solid #d7d7d7;
+	border-left: 6px solid var(--ys-sfl-yellow);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 16px 0;
+	padding: 12px;
+}
+
+.ys-bookings-filters label {
+	min-width: 160px;
+}
+
+.ys-event-picker-panel {
+	align-items: center;
+	background: var(--ys-sfl-purple);
+	border: 0;
+	border-bottom: 6px solid var(--ys-sfl-yellow);
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 16px 0;
+	padding: 16px;
+}
+
+.ys-event-picker-panel label {
+	color: #fff;
+}
+
+.ys-event-picker-panel select {
+	border-color: #fff;
+	flex: 0 1 360px;
+	min-width: 320px;
+	width: auto;
+}
+
+.ys-event-picker-panel .button {
+	background: transparent;
+	border-color: #fff;
+	color: #fff;
+}
+
+.ys-event-picker-panel .button:hover,
+.ys-event-picker-panel .button:focus {
+	background: #fff;
+	border-color: #fff;
+	color: var(--ys-sfl-purple);
+}
+
+.ys-event-picker-panel .button-primary {
+	background: var(--ys-sfl-yellow);
+	border-color: var(--ys-sfl-yellow);
+	color: #000;
+}
+
+.ys-event-picker-panel .button-primary:hover,
+.ys-event-picker-panel .button-primary:focus {
+	background: #fff;
+	border-color: #fff;
+	color: var(--ys-sfl-purple);
+}
+
+.ys-selected-event-title {
+	color: var(--ys-sfl-deep-blue);
+	font-size: 24px;
+	font-weight: 900;
+	margin: 22px 0 10px;
+}
+
+.ys-bookings-empty-state {
+	background: #fff;
+	border: 1px solid #d7d7d7;
+	border-top: 5px solid var(--ys-sfl-purple);
+	margin-top: 16px;
+	max-width: 760px;
+	padding: 22px;
+}
+
+.ys-bookings-empty-state h2 {
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 900;
+	margin-top: 0;
+}
+
+.ys-orphaned-bookings-panel {
+	background: #fff;
+	border-left: 6px solid var(--ys-sfl-red);
+	box-shadow: 0 0 0 1px #d7d7d7;
+	margin: 16px 0;
+	max-width: 1100px;
+	padding: 16px;
+}
+
+.ys-orphaned-bookings-panel h2 {
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 900;
+	margin-top: 0;
+}
+
+.ys-orphaned-bookings-panel table {
+	margin-top: 12px;
+}
+
+.ys-orphaned-bookings-panel .button.delete {
+	border-color: var(--ys-sfl-red);
+	color: var(--ys-sfl-red);
+}
+
+.ys-orphaned-bookings-panel .button.delete:hover,
+.ys-orphaned-bookings-panel .button.delete:focus {
+	background: var(--ys-sfl-red);
+	border-color: var(--ys-sfl-red);
+	color: #fff;
+}
+
+.ys-table-scroll {
+	background: #fff;
+	border: 1px solid #d7d7d7;
+	overflow: auto;
+}
+
+.ys-bookings-table {
+	border: 0;
+	min-width: 980px;
+}
+
+.ys-bookings-table td {
+	vertical-align: middle;
+}
+
+.ys-bookings-table mark.order-status {
+	border-radius: 0;
+	font-weight: 800;
+}
+
+.ys-bookings-page .tablenav-pages .page-numbers {
+	background: #fff;
+	border: 1px solid var(--ys-sfl-deep-blue);
+	color: var(--ys-sfl-deep-blue);
+	display: inline-block;
+	font-weight: 800;
+	line-height: 1.4;
+	margin-left: 4px;
+	min-width: 28px;
+	padding: 3px 7px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.ys-bookings-page .tablenav-pages .page-numbers.current {
+	background: var(--ys-sfl-deep-blue);
+	color: #fff;
+}
+
+.ys-detail-grid {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+	max-width: 1200px;
+}
+
+.ys-booking-detail .postbox {
+	border: 1px solid #d7d7d7;
+	border-top: 5px solid var(--ys-sfl-purple);
+	box-shadow: none;
+}
+
+.ys-booking-detail .postbox h2 {
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 900;
+	margin-top: 0;
+}
+
+.ys-booking-detail h3 {
+	background: var(--ys-sfl-grey);
+	border-left: 6px solid var(--ys-sfl-yellow);
+	color: var(--ys-sfl-deep-blue);
+	font-size: 15px;
+	font-weight: 900;
+	margin: 18px 0 0;
+	padding: 8px 10px;
+}
+
+.ys-booking-detail th,
+.ys-participant-table th {
+	color: var(--ys-sfl-deep-blue);
+	font-weight: 800;
+	width: 220px;
+}
+
+.ys-participant-table {
+	margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+	.ys-admin-grid,
+	.ys-detail-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ys-event-picker-panel select,
+	.ys-bookings-filters label {
+		min-width: 100%;
+	}
+}
